@@ -1,0 +1,20 @@
+{
+  "name": "optivaro-v2-7",
+  "version": "2.7.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0",
+    "pinia": "^2.1.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.0.0"
+  },
+  "description": "Optivaro Management \u2014 Energie-Vergleichsportal v2.7"
+}
