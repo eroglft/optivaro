@@ -14,7 +14,7 @@
           <h2>Unternehmensangaben</h2>
           <div class="imp-box">
             <table class="imp-table">
-            <tbody><tr><td class="imp-key">Firmenname</td><td><strong>Optivaro Management e.U. TEST TEST TEST</strong></td></tr>
+            <tbody><tr><td class="imp-key">Firmenname</td><td><strong>Optivaro Management e.U.</strong></td></tr>
               <tr><td class="imp-key">Rechtsform</td><td>eingetragener Unternehmer (e.U.)</td></tr>
               <tr><td class="imp-key">Firmensitz</td><td>Wien, Österreich</td></tr>
               <tr><td class="imp-key">Unternehmensgegenstand</td><td>Versicherungsvermittlung in Form Versicherungsagent ((Mehrfachagent))</td></tr>
