@@ -20,7 +20,7 @@
         <button class="burger" @click="mob=!mob"><span></span><span></span><span></span></button>
       </div>
       <router-link to="/" class="nav-logo-desktop">
-        <OptivaroLogo :size="90" />
+        <OptivaroLogo :size="70" />
       </router-link>
       <div class="mobile-menu" v-if="mob" @click="mob=false">
         <router-link to="/" class="mob-link">Startseite</router-link>
