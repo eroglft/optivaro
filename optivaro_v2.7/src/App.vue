@@ -136,5 +136,5 @@ const isLogin = computed(() => route.path === '/login')
 .page-enter-active,.page-leave-active{transition:all 0.25s ease;}
 .page-enter-from{opacity:0;transform:translateY(8px);}
 .page-leave-to{opacity:0;}
-@media(max-width:680px){.nav-links{display:none}.burger{display:flex}.top-nav{padding:0 20px}.footer-inner{grid-template-columns:1fr}}
+@media(max-width:680px){.nav-links{display:none}.burger{display:flex}.top-nav{padding:0 20px;flex-direction:row-reverse}.nav-brand{margin-right:auto}.footer-inner{grid-template-columns:1fr}}
 </style>
