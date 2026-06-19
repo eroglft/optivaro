@@ -1,5 +1,5 @@
 <template>
-  <img src="/logo.jpeg" :width="size" :style="{ height: 'auto' }" alt="Optivaro Logo" />
+  <img src="/pdfs/logo.jpeg" :width="size" :style="{ height: 'auto' }" alt="Optivaro Logo" />
 </template>
 
 <script setup>
