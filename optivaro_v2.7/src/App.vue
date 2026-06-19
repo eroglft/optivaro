@@ -7,11 +7,8 @@
     </div>
     <nav class="top-nav" v-if="!isAdmin">
       <router-link to="/" class="nav-brand">
-  <div><div class="brand-name">OPTIVARO</div><div class="brand-sub">Ihr Energievergleich</div></div>
-</router-link>
-<div class="nav-logo-right">
-  <OptivaroLogo :size="106" />
-</div>
+        <div><div class="brand-name">OPTIVARO</div><div class="brand-sub">Ihr Energievergleich</div></div>
+      </router-link>
       <div class="nav-links">
         <router-link to="/" class="nav-link" exact-active-class="active">Startseite</router-link>
         <router-link to="/anbieter" class="nav-link" active-class="active">Anbieter</router-link>
@@ -22,6 +19,9 @@
       <div class="nav-right">
         <button class="burger" @click="mob=!mob"><span></span><span></span><span></span></button>
       </div>
+      <router-link to="/" class="nav-logo-desktop">
+        <OptivaroLogo :size="106" />
+      </router-link>
       <div class="mobile-menu" v-if="mob" @click="mob=false">
         <router-link to="/" class="mob-link">Startseite</router-link>
         <router-link to="/anbieter" class="mob-link">Anbieter</router-link>
@@ -108,16 +108,14 @@ const isLogin = computed(() => route.path === '/login')
 .cta-link{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy)!important;font-weight:600;margin-left:6px;}
 .cta-link:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,0.3);}
 .nav-right{display:flex;align-items:center;gap:10px;}
-.admin-link{font-size:11px;color:var(--white-muted);text-decoration:none;transition:color 0.2s;}
-.admin-link:hover{color:var(--gold);}
 .burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:4px;}
 .burger span{display:block;width:20px;height:2px;background:var(--white-dim);border-radius:1px;}
+.nav-logo-desktop{display:flex;align-items:center;text-decoration:none;}
 .mobile-menu{position:absolute;top:64px;left:0;right:0;background:rgba(10,22,40,0.98);border-bottom:1px solid var(--border);display:flex;flex-direction:column;z-index:100;}
 .mob-link{padding:14px 24px;color:var(--white-dim);text-decoration:none;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.04);transition:all 0.2s;}
 .mob-link:hover{color:var(--white);}
 .mob-link.gold{color:var(--gold);}
 .mob-link.dim{color:var(--white-muted);}
-/* Footer */
 .site-footer{background:rgba(6,14,26,0.98);border-top:1px solid var(--border);padding:48px 40px 24px;margin-top:auto;position:relative;z-index:1;}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;margin-bottom:32px;}
 .footer-col{}
@@ -134,12 +132,19 @@ const isLogin = computed(() => route.path === '/login')
 .footer-bottom{max-width:1100px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);}
 .footer-bottom p{font-size:12px;color:var(--white-muted);margin-bottom:4px;}
 .footer-disclaimer{font-size:11px!important;color:rgba(255,255,255,0.2)!important;line-height:1.5;}
-/* Page transition */
 .page-enter-active,.page-leave-active{transition:all 0.25s ease;}
 .page-enter-from{opacity:0;transform:translateY(8px);}
 .page-leave-to{opacity:0;}
-@media(max-width:680px){.nav-links{display:none}.burger{display:flex}.top-nav{padding:0 20px;flex-direction:row-reverse}.nav-brand{margin-right:auto}.footer-inner{grid-template-columns:1fr}}
-
-.nav-logo-right{display:flex;align-items:center;margin-left:auto;}
-@media(max-width:680px){.nav-logo-right{display:none;}}
+@media(max-width:680px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .top-nav{padding:0 20px}
+  .nav-logo-desktop{display:none}
+  .nav-brand{display:flex}
+  .footer-inner{grid-template-columns:1fr}
+}
+@media(min-width:681px){
+  .nav-brand{display:flex}
+  .nav-logo-desktop{display:flex;margin-left:auto;}
+}
 </style>
