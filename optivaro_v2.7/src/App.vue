@@ -7,10 +7,11 @@
     </div>
     <nav class="top-nav" v-if="!isAdmin">
       <router-link to="/" class="nav-brand">
-              <div><div class="brand-name">OPTIVARO</div><div class="brand-sub">Ihr Energievergleich</div></div>
-        <OptivaroLogo :size="106" />
-  
-      </router-link>
+  <div><div class="brand-name">OPTIVARO</div><div class="brand-sub">Ihr Energievergleich</div></div>
+</router-link>
+<div class="nav-logo-right">
+  <OptivaroLogo :size="106" />
+</div>
       <div class="nav-links">
         <router-link to="/" class="nav-link" exact-active-class="active">Startseite</router-link>
         <router-link to="/anbieter" class="nav-link" active-class="active">Anbieter</router-link>
@@ -138,4 +139,7 @@ const isLogin = computed(() => route.path === '/login')
 .page-enter-from{opacity:0;transform:translateY(8px);}
 .page-leave-to{opacity:0;}
 @media(max-width:680px){.nav-links{display:none}.burger{display:flex}.top-nav{padding:0 20px;flex-direction:row-reverse}.nav-brand{margin-right:auto}.footer-inner{grid-template-columns:1fr}}
+
+.nav-logo-right{display:flex;align-items:center;margin-left:auto;}
+@media(max-width:680px){.nav-logo-right{display:none;}}
 </style>
