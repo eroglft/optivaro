@@ -7,7 +7,7 @@
     </div>
     <nav class="top-nav" v-if="!isAdmin">
       <router-link to="/" class="nav-brand">
-        <OptivaroLogo :size="52" />
+        <OptivaroLogo :size="104" />
         <div><div class="brand-name">OPTIVARO</div><div class="brand-sub">Ihr Energievergleich</div></div>
       </router-link>
       <div class="nav-links">
