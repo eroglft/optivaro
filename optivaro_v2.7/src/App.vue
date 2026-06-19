@@ -7,7 +7,7 @@
     </div>
     <nav class="top-nav" v-if="!isAdmin">
       <router-link to="/" class="nav-brand">
-        <OptivaroLogo :size="120" />
+        <OptivaroLogo :size="108" />
         
       </router-link>
       <div class="nav-links">
