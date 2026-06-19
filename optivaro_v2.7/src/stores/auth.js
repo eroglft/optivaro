@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', () => {
   const isAdmin    = computed(() => user.value?.role === 'admin')
 
   const USERS = [
-    { id: 1, username: 'admin', password: 'optivaro2024', role: 'admin', name: 'Administrator' },
+    { id: 1, username: 'admin', password: 'RastinTina2026!', role: 'admin', name: 'Administrator' },
   ]
 
   function login(username, password) {
